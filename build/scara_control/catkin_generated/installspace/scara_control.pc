@@ -1,0 +1,8 @@
+prefix=/home/mingo/catkin_ws/install
+
+Name: scara_control
+Description: Description of scara_control
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

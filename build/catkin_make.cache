@@ -1,0 +1,2 @@
+scara:scara_control:scara_moveit
+-DCATKIN_DEVEL_PREFIX=/home/mingo/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mingo/catkin_ws/install -G Unix Makefiles

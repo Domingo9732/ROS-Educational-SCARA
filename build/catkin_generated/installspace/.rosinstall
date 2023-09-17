@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/mingo/catkin_ws/install/setup.sh

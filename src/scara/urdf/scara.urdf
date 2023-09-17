@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="scara">
+    <link name="base_link">
+        <inertial>
+            <origin xyz="-0.0559432148005522 0.107400404608301 -0.0136704490477564" rpy="0 0 1.745" />
+            <mass value="0.567696033845706" />
+            <inertia ixx="0.00117832007044877" ixy="-1.32722472852787E-05" ixz="-5.74547542664142E-06" iyy="0.00333381453526779" iyz="-5.81917585828392E-06" izz="0.0023319205252071" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 1.745" />
+            <geometry>
+                <mesh filename="package://scara/meshes/base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 1.745" />
+            <geometry>
+                <mesh filename="package://scara/meshes/base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link1">
+        <inertial>
+            <origin xyz="0.00398515070749521 0.0012304734885111 0.208628021985498" rpy="0 0 0" />
+            <mass value="0.592388184768862" />
+            <inertia ixx="0.00230324008307559" ixy="4.54488451690003E-06" ixz="-8.19813165922092E-07" iyy="0.00229028805782372" iyz="-4.98199551456662E-08" izz="0.000745657593833466" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 263" />
+            <geometry>
+                <mesh filename="package://scara/meshes/link1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 263" />
+            <geometry>
+                <mesh filename="package://scara/meshes/link1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint1" type="revolute">
+        <origin xyz="-0.000314 0.0097731 0.11285" rpy="0 0 2.974" />
+        <parent link="base_link" />
+        <child link="link1" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="5.3" effort="0" velocity="0" />
+    </joint>
+    <link name="link2">
+        <inertial>
+            <origin xyz="0.120120531120971 0.0233285163492597 0.0337965984065952" rpy="0 0 0" />
+            <mass value="0.490908838474279" />
+            <inertia ixx="0.000517204178830857" ixy="-0.000206673388248204" ixz="5.6381045631584E-06" iyy="0.00114764695880162" iyz="1.4831396837765E-06" izz="0.0015260358638539" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://scara/meshes/link2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://scara/meshes/link2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint2" type="prismatic">
+        <origin xyz="-0.0425 0 0.30405" rpy="0 0 0" />
+        <parent link="link1" />
+        <child link="link2" />
+        <axis xyz="0 0 1" />
+        <limit lower="-0.25" upper="0" effort="0" velocity="0" />
+    </joint>
+    <link name="link3">
+        <inertial>
+            <origin xyz="0.0411482166714624 -0.0328195128147589 -0.0318064813169703" rpy="0 0 0" />
+            <mass value="0.361872561782423" />
+            <inertia ixx="0.000539311352852357" ixy="0.000419112252347005" ixz="-1.90943342949841E-06" iyy="0.000731596594690861" iyz="1.51784166698183E-06" izz="0.00124081046695272" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://scara/meshes/link3.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://scara/meshes/link3.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint3" type="revolute">
+        <origin xyz="0.26087 0.065575 0" rpy="0 0 -1.6209" />
+        <parent link="link2" />
+        <child link="link3" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="5.4" effort="0" velocity="0" />
+    </joint>
+    <link name="link4">
+        <inertial>
+            <origin xyz="0.000338084713539272 -0.000682556824741234 -0.0155530475524357" rpy="0 0 0" />
+            <mass value="0.0418991154754074" />
+            <inertia ixx="1.49190627571846E-05" ixy="-5.28729361013983E-08" ixz="-1.65937357154501E-08" iyy="1.4999618477623E-05" iyz="3.3500975072281E-08" izz="2.74316756500098E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://scara/meshes/link4.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://scara/meshes/link4.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint4" type="revolute">
+        <origin xyz="0.10676 -0.085051 -0.047" rpy="0 0 -1.9927" />
+        <parent link="link3" />
+        <child link="link4" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="5.3" effort="0" velocity="0" />
+    </joint>
+    <link name="gripper_link">
+        <inertial>
+            <origin xyz="0.366017145740965 -0.00835853113241894 0.114010116951321" rpy="0 0 0" />
+            <mass value="0.0761012463007395" />
+            <inertia ixx="2.69795628491282E-05" ixy="-1.78700373428015E-06" ixz="1.9970548981517E-08" iyy="3.88603692194263E-05" iyz="2.39103286032331E-08" izz="2.2754892417133E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://scara/meshes/gripper_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://scara/meshes/gripper_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="gripper" type="fixed">
+        <origin xyz="0.28597 -0.23184 -0.17462" rpy="0 0 2.5133" />
+        <parent link="link4" />
+        <child link="gripper_link" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="finger_link1">
+        <inertial>
+            <origin xyz="0.326447727583928 -0.0255207025019713 0.0914731627239749" rpy="0 0 0" />
+            <mass value="0.046190075590137" />
+            <inertia ixx="2.0544145789691E-05" ixy="-1.92958422300417E-07" ixz="1.50941816075993E-07" iyy="2.18304443528183E-05" iyz="2.21550545201902E-08" izz="3.04433968977455E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://scara/meshes/finger_link1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://scara/meshes/finger_link1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="finger_joint1" type="prismatic">
+        <origin xyz="-0.010836 -0.0015905 0" rpy="0 0 0" />
+        <parent link="gripper_link" />
+        <child link="finger_link1" />
+        <axis xyz="1 0 0" />
+        <limit lower="0" upper="0.025" effort="0" velocity="0" />
+    </joint>
+    <link name="finger_link2">
+        <inertial>
+            <origin xyz="0.409650090019631 -0.011840574126556 0.0914731627239749" rpy="0 0 0" />
+            <mass value="0.0461900755901369" />
+            <inertia ixx="2.05441457896909E-05" ixy="-1.92958422300408E-07" ixz="-1.50941816076044E-07" iyy="2.18304443528182E-05" iyz="-2.21550545194695E-08" izz="3.04433968977453E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://scara/meshes/finger_link2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://scara/meshes/finger_link2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="finger_joint2" type="prismatic">
+        <origin xyz="0.01 0 0" rpy="0 0 0" />
+        <parent link="gripper_link" />
+        <child link="finger_link2" />
+        <axis xyz="1 0 0" />
+        <limit lower="-0.025" upper="0" effort="0" velocity="0" />
+        <mimic joint="finger_joint1" multiplier="-1" offset="0" />
+    </joint>
+    <transmission name="trans_joint1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint1">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint1_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint2">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint2_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint3">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint3_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint4">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint4_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_finger_joint1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="finger_joint1">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="finger_joint1_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_finger_joint2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="finger_joint2">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="finger_joint2_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>
+

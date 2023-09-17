@@ -1,0 +1,8 @@
+prefix=/home/mingo/catkin_ws/devel
+
+Name: robot_control_node
+Description: Description of robot_control_node
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

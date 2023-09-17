@@ -1,0 +1,8 @@
+prefix=/home/mingo/catkin_ws/devel
+
+Name: rqt_twist_interface
+Description: Description of rqt_twist_interface
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

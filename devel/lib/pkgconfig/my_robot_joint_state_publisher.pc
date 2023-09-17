@@ -1,0 +1,8 @@
+prefix=/home/mingo/catkin_ws/devel
+
+Name: my_robot_joint_state_publisher
+Description: Description of my_robot_joint_state_publisher
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

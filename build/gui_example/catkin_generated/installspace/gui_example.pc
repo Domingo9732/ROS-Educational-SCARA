@@ -1,0 +1,8 @@
+prefix=/home/mingo/catkin_ws/install
+
+Name: gui_example
+Description: Description of gui_example
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

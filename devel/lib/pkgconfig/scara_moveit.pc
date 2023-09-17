@@ -1,0 +1,8 @@
+prefix=/home/mingo/catkin_ws/devel
+
+Name: scara_moveit
+Description: Description of scara_moveit
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

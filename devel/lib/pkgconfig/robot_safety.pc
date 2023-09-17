@@ -1,0 +1,8 @@
+prefix=/home/mingo/catkin_ws/devel
+
+Name: robot_safety
+Description: Description of robot_safety
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

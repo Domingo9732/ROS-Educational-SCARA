@@ -1,0 +1,8 @@
+prefix=/home/mingo/catkin_ws/devel
+
+Name: scara
+Description: Description of scara
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

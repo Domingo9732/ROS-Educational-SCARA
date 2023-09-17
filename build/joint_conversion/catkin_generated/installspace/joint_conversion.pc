@@ -1,0 +1,8 @@
+prefix=/home/mingo/catkin_ws/install
+
+Name: joint_conversion
+Description: Description of joint_conversion
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
